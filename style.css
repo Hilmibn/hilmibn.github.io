@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* navbar */
+
+nav {
+  display: flex;
+  background-color: bisque;
+  justify-content: space-around;
+  height: 60px;
+  color: rgb(14, 14, 85);
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  width: 40%;
+  list-style: none;
+  justify-content: space-evenly;
+}
+nav ul li a {
+  color: rgb(14, 14, 85);
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+nav .logo {
+  font-family: "Courier Prime", monospace;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  display: none;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: -5px;
+  left: -6px;
+  opacity: 0;
+  z-index: 5;
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  background-color: rgb(14, 14, 85);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* hamburger menu aniation */
+
+.menu-toggle span:nth-child(2) {
+  /* background-color: red; */
+  transform-origin: 0 0;
+}
+.menu-toggle span:last-child {
+  /* background-color: yellow; */
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1.5px);
+  background-color: rgba(14, 14, 85, 0.8);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0px);
+  background-color: rgba(14, 14, 85, 0.8);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+  opacity: 0;
+}
+
+/* resphonsive Breakpoint */
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 60%;
+  }
+}
+/* Ukuran Mobile */
+@media screen and (max-width: 576px) {
+  nav ul {
+    position: absolute;
+    right: 50;
+    top: 60px;
+    transform: translatey(-100%);
+    width: 80%;
+    height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: bisque;
+    justify-content: center;
+    gap: 30px;
+    z-index: -1;
+    border-radius: 0 0 10px 15px;
+    transition: all 0.7s;
+  }
+
+  nav ul.slide {
+    transform: translateX(0);
+  }
+
+  nav ul li a {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
