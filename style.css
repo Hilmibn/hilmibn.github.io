@@ -10,10 +10,44 @@ body {
   display: flex;
   background-color: #fff;
   justify-content: space-around;
-  height: 80px;
+  height: 70px;
   color: rgb(14, 14, 85);
   align-items: center;
   
+}
+
+nav {
+  position: relative;
+  z-index: 9999;
+}
+.hiro{
+  width: 95%;
+  margin: auto;
+  position: relative;
+  margin-bottom: 70px;
+}
+.image-hiro{
+  background: url("hiro.jpg") no-repeat;
+	background-size: cover;
+  height: 500px;
+  background-position: 50% 30%;
+  border-radius: 20px;
+  filter: blur(2px) brightness(90%) opacity(90%);
+
+}
+.heading {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  font-family: 'poppins';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+   text-align: center;
+   line-height: 50px;
+   letter-spacing: 5px;
+   
 }
 
 .selamat-datang{
@@ -23,7 +57,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 28px;
-  padding:30px 0px 30px 0px;
+  padding:20px 0px 20px 0px;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 900;
   letter-spacing:10px;
@@ -121,8 +155,114 @@ nav img {
   opacity: 0;
 }
 
+
+
+.card {
+  width: 90%;
+  overflow:auto;
+  display: flex;
+  margin:20px auto;
+  gap: 10px;
+  
+}
+.card1,.card2,.card3,.card4{
+  width: 400px;
+  border: 1px solid rgba(74, 74, 74, 0.141);
+  overflow: hidden;
+  border-radius: 15px;
+  font-family: 'poppins';
+}
+
+.card1 img{
+  display: block
+  background-size: cover;
+  width:100%;
+}
+
+.card p {
+  font-size: 14px;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  padding: 0px 30px;
+}
+.card h3{
+  font-size: 28px;
+  font-weight: bold;
+  color: #313030;
+  line-height: 50px;
+  margin-left:30px;
+}
+.card button{
+  background-color: #009BA6;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 12px 30px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.grid {
+  width: 90%;
+  display: grid;
+  align-items: center;
+  grid-column-start: 3;
+  gap: 10px;
+  
+}
+.grid1{
+  width: 400px;
+  border: 1px solid rgba(74, 74, 74, 0.141);
+  overflow: hidden;
+  border-radius: 15px;
+  font-family: 'poppins';
+  
+}
+
+.grid1 img{
+  display: block
+  background-size: cover;
+  width:100%;
+}
+
+.grid p {
+  font-size: 14px;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  padding: 0px 30px;
+}
+.grid h3{
+  font-size: 28px;
+  font-weight: bold;
+  color: #313030;
+  line-height: 50px;
+  padding: 0px 30px;
+}
+.grid button{
+  background-color: #009BA6;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 12px 30px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
 /* resphonsive Breakpoint */
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
+  
+  .card{
+    width: 95%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: Hidden;
+  }
+  .card1,.card2,.card3,.card4{
+    width: 350px;
+  }
   nav ul li {
     padding: 15px 15px;
     transition: all 0.5s ease;
@@ -155,9 +295,30 @@ nav img {
   nav ul {
     width: 60%;
   }
-  
+  .card{
+    width: 95%;
+    margin: auto;
+    flex-wrap:wrap;
+    justify-content: center;
+    overflow: Hidden;
+  }
+  .card1,.card2,.card3,.card4{
+    width: 500px;
+  }
 /* Ukuran Mobile */
 @media screen and (max-width: 576px) {
+  .card{
+    width: 95%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: Hidden;
+  }
+  .card1,.card2,.card3,.card4{
+    width: 450px;
+  }
+  
+  
   nav ul {
     position: absolute;
     right: 50;
