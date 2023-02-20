@@ -43,7 +43,7 @@ nav {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-450%);
+  transform: translateX(-50%);
    text-align: center;
    line-height: 50px;
    letter-spacing: 5px;
@@ -317,14 +317,12 @@ nav img {
   .card1,.card2,.card3,.card4{
     width: 450px;
   }
-  nav {
-    display: none;
-  }
+  
   
   nav ul {
     position: absolute;
     right: 50px;
-    top: 300px;
+    top: 125px;
     padding: 20px 0px 10px;
     transform: translatey(-450%);
     width: 80%;
